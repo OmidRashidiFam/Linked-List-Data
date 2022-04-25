@@ -163,3 +163,80 @@ class LinkedList {
 // ********** create new LinkedList 
 const ll = new LinkedList();
 console.log(ll)
+
+// ********** input ==> add first and last
+const addData = document.querySelector('#add-data');
+const btnAddFirst = document.querySelector('#btn-addFirst');
+btnAddFirst.onclick = () => {
+  ll.addFirst(addData.value)
+  console.log(ll)
+};
+const btnAddLast = document.querySelector('#btn-addLast');
+btnAddLast.onclick = () => {
+  ll.addLast(addData.value)
+  console.log(ll)
+}
+
+// ********** input ==> add index
+const addIndexData = document.querySelector('#addIndex-data');
+const addIndexIndex = document.querySelector('#addIndex-index');
+const btnAddIndex = document.querySelector('#btn-addIndex');
+btnAddIndex.onclick = () => {
+  ll.addIndex(addIndexData.value, addIndexIndex.value)
+  console.log(ll)
+}
+
+// ********** input ==> remove index
+const removeIndexIndex = document.querySelector('#removeIndex-index');
+const btnRemoveIndex = document.querySelector('#btn-removeIndex');
+btnRemoveIndex.onclick = () => {
+  ll.removeIndex(removeIndexIndex.value)
+  console.log(ll)
+}
+
+// ********** btn ==> remove first
+const btnRemoveFirst = document.querySelector('#btn-removeFirst');
+btnRemoveFirst.onclick = () => {
+  ll.removeFirst()
+  console.log(ll)
+}
+
+// ********** btn ==> clear list button
+const btnClearList = document.querySelector('#btn-clearList');
+btnClearList.onclick = () => {
+  ll.clearList()
+  console.log(ll)
+
+}
+
+// ********** btn ==> remove last
+const btnRemoveLast = document.querySelector('#btn-removeLast');
+btnRemoveLast.onclick = () => {
+  ll.removeIndex(ll.size - 1);
+  console.log(ll)
+}
+
+// ********** input ==> get index
+const getAtIndex = document.querySelector('#getAt-index');
+const btnGetAt = document.querySelector('#btn-getAt');
+btnGetAt.onclick = () => {
+  ll.getAt(getAtIndex.value)
+}
+
+// ********** btn ==> get min
+const btnGetMin = document.querySelector('#btn-getMin')
+btnGetMin.onclick = () => {
+  ll.getMin()
+}
+
+// ********** btn ==> print list data
+const btnPrintListData = document.querySelector('#btn-printListData')
+btnPrintListData.onclick = () => {
+  ll.printListData()
+}
+
+// ********** btn ==> get max
+const btnGetMax = document.querySelector('#btn-getMax')
+btnGetMax.onclick = () => {
+  ll.getMax()
+}
